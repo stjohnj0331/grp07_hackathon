@@ -27,14 +27,14 @@ app.get('/employees', (req, res) => {
 });
 
 // get one employee based on search term
-app.get('/employee/:id', (req, res) => {
+app.get('/employee/:_id', (req, res) => {
     // check if id is correct in req.params.id
-    dao.findOneEmployee((err, employee) => {
+    dao.findOneEmployee(req.params._id, (err, employee) => {
         if(employee !== undefined){
-            console.log("index.js one employeee: " + employee)
+        //    console.log("index.js one employee: " + req.params._id)
             res.send(employee);
         } else {
-            res.statusCode = 500;
+            res.statusCode = 404;
             res.end;
         }
     });
