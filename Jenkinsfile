@@ -19,7 +19,7 @@ node {
  }
 
  stage('Deploy'){
- //bat '''xcopy build\\* \\Software\\nginx-1.22.0\\html\\ /s /y'''
+ // replace this with our own build script
+ // bat '''xcopy build\\* \\Software\\nginx-1.22.0\\html\\ /s /y'''
  }
 }
-
