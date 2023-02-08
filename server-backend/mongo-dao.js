@@ -25,14 +25,16 @@ module.exports.findAllEmployees = function(callback, value) {
 };
 
 //reconfigure to find one employee
-module.exports.findOneEmployee = function(callback) {
+module.exports.findOneEmployee = function(id, callback) {
     var col = dbPool.collection("employees");
-    col.find()
-        .toArray((err, films) => {
+     col.find({_id: +id})
+        .toArray((err, employee) => {
             if(!err){
-                callback(null, films);
+                callback(null, employee)
             } else {
-                callback("failed to find films", undefined);
+                callback("Failed to find employee", undefined)
             }
-        });
+        }); 
+
+        
 };
