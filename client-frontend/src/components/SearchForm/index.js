@@ -1,14 +1,23 @@
-import React, {state} from "react"
-
-import EmployeeTable from "../EmployeeTable";
-import EmployeeContainer from "../EmployeeContainer";
+import React from "react"
 
 
-
-function SearchForm() {
-    const greeting = 'Hello Function Component!';
+function SearchForm(props) {
   
-    return <h1>{greeting}</h1>;
-  }
+    return(
+ <nav className="navbar navbar-blue bg-blue justify-content-center">
+        <form className = "form-inline m-2"  onSubmit={props.handleFormSubmit} >
+        <input
+        className = "form-control"
+        value = {props.value}
+        name ="search"
+        onChange = {props.handleInputChange}
+        type = "search"
+        placeholde = 'Search'
+         />
+        </form>
+</nav>
+    )
+}
+  
   
   export default SearchForm;

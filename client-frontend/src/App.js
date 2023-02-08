@@ -6,15 +6,15 @@ import background from "./images/background.png"
 import './App.css';
 import EmployeeContainer from "./components/EmployeeContainer"
 import Header from "./components/Header"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function App() {
   return (
     <BrowserRouter>
       <Row style={styles.wrapper} className=" img-responsive">
-        <Header/>
+       <Header/>
         <main style={styles.main}>
-          <h2>MainBody</h2>
-          <EmployeeContainer/>
+         <EmployeeContainer/>
         </main>
         <footer style={styles.footer}>
           Copyright &copy; kmj.com {new Date().getUTCFullYear()}

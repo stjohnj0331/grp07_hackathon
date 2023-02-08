@@ -43,7 +43,7 @@ module.exports.findOneEmployee = function(id, callback) {
 // finding all employees from the search term
 module.exports.searchEmployees = function(searchName, callback) {
     var col = dbPool.collection("employees");
-    col.find({last_name: {$regex: searchName, $options: 'i' }})
+    col.find({name: {$regex: searchName, $options: 'i' }})
         .toArray((err, employees) => {
             if(!err){
                 callback(null, employees);
