@@ -1,12 +1,9 @@
-import React, {state} from "react"
-
-import EmployeeContainer from "../EmployeeContainer";
-import SearchForm from "../SearchForm";
+import React from "react"
 
 
 
 function EmployeeTable() {
-    const greeting = 'Hello Function Component!';
+    const greeting = 'This is where the employee table resides!';
   
     return <h1>{greeting}</h1>;
   }

@@ -1,14 +1,15 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+//   Link
+// } from "react-router-dom";
 import EmployeeContainer from "./components/EmployeeContainer"
 import Header from "./components/Header"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-    export default function App() {
+  function App() {
       return (
         <>
         <Header/>
@@ -16,5 +17,7 @@ import Header from "./components/Header"
         </>
       );
     }
+
+    export default App;
     
   
