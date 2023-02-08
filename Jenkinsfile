@@ -1,6 +1,6 @@
 node {
  stage('Checkout') {
- git url: 'https://github.com/stjohnj0331/grp07_hackathon.git'
+ git (branch:'main',url: 'https://github.com/stjohnj0331/grp07_hackathon.git')
  }
 
  stage('Install Dependencies'){
@@ -17,7 +17,7 @@ node {
  }
 
  stage('Deploy'){
- bat '''xcopy build\\* \\Software\\nginx-1.22.0\\html\\ /s /y'''
+ //bat '''xcopy build\\* \\Software\\nginx-1.22.0\\html\\ /s /y'''
  }
 }
 
