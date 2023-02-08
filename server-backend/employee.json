@@ -1,0 +1,21 @@
+[
+    {
+        "name": "John Smith",
+        "phone number": "123-456-7890",
+        "job role": "Developer",
+        "work location": "New York",
+        "salary": 115200,
+        "manager": "Harry Kane",
+        "employees": []
+    },
+    {
+        "name": "Harry Kane",
+        "phone number": "123-456-7890",
+        "job role": "SCRUM Master",
+        "work location": "London",
+        "salary": 1145200,
+        "manager": "Harry Kane",
+        "employees": []
+    }
+
+]
