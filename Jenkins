@@ -1,5 +1,0 @@
-node{
-  stage('checkout'){
-    git url: '
-  }
-}
