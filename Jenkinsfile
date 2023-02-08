@@ -6,12 +6,14 @@ node {
  stage('Install Dependencies'){
  bat'''
  set PATH=C:/"Program Files"/nodejs
+ cd client-frontend
  npm install
  '''
  }
  stage('Build'){
  bat'''
  set PATH=C:/"Program Files"/nodejs
+ cd client-frontend
  npm run build
  '''
  }
