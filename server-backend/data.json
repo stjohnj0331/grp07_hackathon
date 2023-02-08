@@ -1,4 +1,4 @@
-{
+[{
 	"employees": [
 		{
 			"id": 0,
@@ -14,7 +14,7 @@
 			"first_name": "Phoebe",
 			"last_name": "Cruickshank",
 			"phone_number": "361-623-7867",
-			"job_role": "Designer",
+			"job_role": "HR",
 			"location": "Dearborn",
 			"salary": "94931.58"
 		},
@@ -226,4 +226,4 @@
 			"salary": "125479.29"
 		}
 	]
-}
+}]
