@@ -12,8 +12,11 @@ function EmployeeContainer() {
 // Work location
 // Salary
 
+const [name, setName] =useState([]);
 const [phoneNumber, setphoneNumber] = useState([]);
 const [jobRole, setjobRole] = useState([]);
+const [workLocation, setworkLocation] = useState([]);
+const [salary, setSalary] = useState([])
 
 
     const greeting = 'Hello Function Component!';
