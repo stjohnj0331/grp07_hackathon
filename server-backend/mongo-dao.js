@@ -35,6 +35,20 @@ module.exports.findOneEmployee = function(id, callback) {
                 callback("Failed to find employee", undefined)
             }
         }); 
-
         
+};
+
+
+// db.employees.find({"last_name":{$regex: /name/ } })
+// finding all employees from the search term
+module.exports.searchEmployees = function(searchName, callback) {
+    var col = dbPool.collection("employees");
+    col.find({name: {$regex: searchName, $options: 'i' }})
+        .toArray((err, employees) => {
+            if(!err){
+                callback(null, employees);
+            } else {
+                callback("failed to find employees", undefined);
+            }
+        });
 };
