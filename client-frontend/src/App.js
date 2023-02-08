@@ -11,11 +11,10 @@ export default function App() {
   return (
     <BrowserRouter>
       <Row style={styles.wrapper} className=" img-responsive">
-        <header style={styles.header}>
-          <h4>Employee Directory</h4>
-        </header>
+        <Header/>
         <main style={styles.main}>
           <h2>MainBody</h2>
+          <EmployeeContainer/>
         </main>
         <footer style={styles.footer}>
           Copyright &copy; kmj.com {new Date().getUTCFullYear()}
