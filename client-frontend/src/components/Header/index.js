@@ -9,7 +9,6 @@ function Header() {
     return(
     <Header>
         <h1 className="TextCenter"> Enterprise Employees Directory</h1>
-        
     </Header>
     )
   }
