@@ -12,6 +12,7 @@ import './App.css';
 import EmployeeContainer from "./components/EmployeeContainer";
 import SearchForm from "./components/SearchForm";
 import Header from "./components/Header";
+import Home from './components/home.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function App() {
@@ -30,7 +31,7 @@ export default function App() {
         <main style={styles.main}>
           <Row>
             <Routes>
-              {/* <Route index element={<Home />} /> */}
+              <Route index element={<Home />} /> 
               <Route path="search" element={<SearchForm />} />
               <Route path="allEmployees" element={<EmployeeContainer />} />
             </Routes>
