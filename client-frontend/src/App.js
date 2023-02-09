@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter,
+  Route,
+  Routes,
+  Link
+} from "react-router-dom";
 import { Button, Row, Col, ButtonGroup } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import background from "./images/background.png"
