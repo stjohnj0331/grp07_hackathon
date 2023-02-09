@@ -1,10 +1,11 @@
 import React from "react";
-import { BrowserRouter, Link} from "react-router-dom";
+import { BrowserRouter, Route, Link} from "react-router-dom";
 import {Button, Row, Col, ButtonGroup} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import background from "./images/background.png"
 import './App.css';
 import EmployeeContainer from "./components/EmployeeContainer"
+import Auth from "./components/Auth"
 import Header from "./components/Header"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -14,7 +15,8 @@ export default function App() {
       <Row style={styles.wrapper} className=" img-responsive">
        <Header/>
         <main style={styles.main}>
-         <EmployeeContainer/>
+          <Auth/>
+         {/* <EmployeeContainer/> */}
         </main>
         <footer style={styles.footer}>
           Copyright &copy; kmj.com {new Date().getUTCFullYear()}
