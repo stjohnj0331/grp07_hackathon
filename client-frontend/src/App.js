@@ -1,13 +1,10 @@
 import React from "react";
 import {
-  BrowserRouter as Router,
-  Switch,
+  BrowserRouter,
   Route,
+  Routes,
   Link
 } from "react-router-dom";
-import EmployeeContainer from "./components/EmployeeContainer"
-import Header from "./components/Header"
-import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
 import { Button, Row, Col, ButtonGroup } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import background from "./images/background.png"
