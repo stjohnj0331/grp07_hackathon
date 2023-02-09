@@ -3,9 +3,17 @@
 			"_id": 0,
 			"name": "Kent Heidenreich IV",
 			"phone_number": "(655) 306-6342 x182",
-			"job_role": "Representative",
+			"job_role": "Manager",
 			"location": "Doral",
-			"salary": "263570.35"
+			"salary": "263570.35",
+			"employees": [
+				"Emma Padberg",
+				"Troy Stamm",
+				"Maggie Jakubowski",
+				"Nora Beer",
+				"Lora Jones",
+				"Pauline Lowe"
+			]
 		},
 		{
 			"_id": 1,
@@ -17,7 +25,7 @@
 		},
 		{
 			"_id": 2,
-			"name": "Mrs. Troy Stamm DDS",
+			"name": "Troy Stamm",
 			"phone_number": "816-888-5110 x53807",
 			"job_role": "Director",
 			"location": "Davie",
@@ -25,7 +33,7 @@
 		},
 		{
 			"_id": 3,
-			"name": "Mrs. Maggie Jakubowski",
+			"name": "Maggie Jakubowski",
 			"phone_number": "770-729-1306 x13192",
 			"job_role": "Planner",
 			"location": "West Valley City",
@@ -57,17 +65,27 @@
 		},
 		{
 			"_id": 7,
-			"name": "Diane Howe IV",
+			"name": "Kieran Marcus",
 			"phone_number": "340-878-7697 x2371",
-			"job_role": "Director",
-			"location": "Downey",
-			"salary": "106100.79"
+			"job_role": "Manager",
+			"location": "Birmingham",
+			"salary": "106100.79",
+			"employes": [
+				"Bethany Marquardt",
+				"Corey Schimmel",
+				"Amos Dach",
+				"Glenda DuBuque",
+				"Clifford Kovacek",
+				"Naomi Schiller",
+				"Katie Doyle",
+				"Leticia Leannon"
+			]
 		},
 		{
 			"_id": 8,
 			"name": "Bethany Marquardt",
 			"phone_number": "292-883-5149 x6237",
-			"job_role": "Officer",
+			"job_role": "HR",
 			"location": "Hicksville",
 			"salary": "162293.06"
 		},
@@ -97,7 +115,7 @@
 		},
 		{
 			"_id": 12,
-			"name": "Clifford Kovacek II",
+			"name": "Clifford Kovacek",
 			"phone_number": "(321) 210-5820 x010",
 			"job_role": "Agent",
 			"location": "New Haven",
@@ -105,7 +123,7 @@
 		},
 		{
 			"_id": 13,
-			"name": "Mr. Naomi Schiller",
+			"name": "Naomi Schiller",
 			"phone_number": "(405) 623-5662 x481",
 			"job_role": "Consultant",
 			"location": "Grapevine",
@@ -139,17 +157,18 @@
 			"_id": 17,
 			"name": "Keith Gottlieb",
 			"phone_number": "707.842.0972 x631",
-			"job_role": "Technician",
+			"job_role": "HR",
 			"location": "Eden Prairie",
 			"salary": "217625.27"
 		},
 		{
 			"_id": 18,
-			"name": "Calvin Lebsack",
+			"name": "Thomas Shelby",
 			"phone_number": "860.965.8136 x59277",
 			"job_role": "Strategist",
-			"location": "Greenville",
-			"salary": "97694.89"
+			"location": "Birmingham",
+			"salary": "347694.89",
+			"employees": ["Kieran Marcus"]
 		},
 		{
 			"_id": 19,
