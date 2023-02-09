@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from "react"
 
 import EmployeeTable from "../EmployeeTable";
-import SearchForm from "../SearchForm";
 
 
 
@@ -21,7 +20,6 @@ useEffect(() => {
   
     return (
         <>
-        <SearchForm/>
         <div className= "container mt">
         <EmployeeTable employees={employees}/>
         </div>
