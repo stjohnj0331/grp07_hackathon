@@ -1,7 +1,6 @@
 import React, {useState} from "react"
 
 import EmployeeTable from "../EmployeeTable";
-import SearchForm from "../SearchForm";
 
 
 
@@ -18,7 +17,6 @@ const [salary, setSalary] = useState([])
   
     return (
         <>
-        <SearchForm/>
         <div className= "container mt">
         <EmployeeTable/>
         </div>

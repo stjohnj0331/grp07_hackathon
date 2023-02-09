@@ -22,17 +22,16 @@ function SearchForm() {
         )
 
     }
-    console.log("setEmployees" + employees)
 
     return (
         <section className="wrapper">
-            <p>Search for an employee to view in the directory.`</p>
+            <p>Search for an employee to view in the directory.</p>
             <form onSubmit={(e) => { e.preventDefault(); getEmployees(searchTerm) }}>
-                <label htmlFor="searchString" style={styles.lbl}>Search term</label>
+                <label htmlFor="searchString" style={styles.lbl}>Employee:</label>
                 <input onChange={e => setSearchTerm(e.target.value)} value={searchTerm} style={styles.searchBox} />
                 <input type="submit" value="Search" className="accept" />
             </form>
-            <p>You're searching for {searchTerm}</p>
+            {/* <p>You're searching for {searchTerm}</p> */}
             <SearchResult employeeList={employees}/>
         </section>
     )

@@ -1,8 +1,4 @@
-
-
 function SearchResult(props) {
-    console.log(props)
-
     return (
         <>
             <div id="employees">
