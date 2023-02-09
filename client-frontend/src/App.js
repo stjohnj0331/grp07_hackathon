@@ -16,12 +16,12 @@ export default function App() {
         <Header />
         <header className='nav'>
           <ButtonGroup>
-            <Col xs={8}></Col>
+            <Col xs={0}></Col>
             <Col><Button variant="danger"><Link style={styles.nav} to="/">Home</Link></Button></Col>
             <Col><Button variant="danger"><Link style={styles.nav} to='/search'>Search</Link></Button></Col>
             <Col><Button variant="danger"><Link style={styles.nav} to='/allEmployees'>All Employees</Link></Button></Col>
           </ButtonGroup>
-        </header>
+        </header>       
         <main style={styles.main}>
           <Row>
             <Routes>
@@ -29,7 +29,7 @@ export default function App() {
               <Route path="search" element={<SearchForm />} />
               <Route path="allEmployees" element={<EmployeeContainer />} />
             </Routes>
-          </Row>
+        </Row>
         </main>
         <footer style={styles.footer}>
           Copyright &copy; kmj.com {new Date().getUTCFullYear()}
@@ -58,5 +58,5 @@ const styles = {
     bottom: 0,
     height: '5%',
     color: 'black'
-  }
+  },
 }
