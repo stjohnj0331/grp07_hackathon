@@ -43,7 +43,6 @@ app.get('/employee/:_id', (req, res) => {
 //search for employees based on last name from front end
 app.get('/employee/search/:name', (req, res) => {
     dao.searchEmployees(req.params.name, (err, employees) => {
-        console.log("test")
         if(employees !== undefined){
             res.send(employees)
         } else {
