@@ -1,47 +1,20 @@
 import React from "react";
-import { BrowserRouter, Link} from "react-router-dom";
-import {Button, Row, Col, ButtonGroup} from 'react-bootstrap'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import background from "./images/background.png"
-import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import EmployeeContainer from "./components/EmployeeContainer"
 import Header from "./components/Header"
-import 'bootstrap/dist/css/bootstrap.min.css';
 
-export default function App() {
-  return (
-    <BrowserRouter>
-      <Row style={styles.wrapper} className=" img-responsive">
-       <Header/>
-        <main style={styles.main}>
-         <EmployeeContainer/>
-        </main>
-        <footer style={styles.footer}>
-          Copyright &copy; kmj.com {new Date().getUTCFullYear()}
-        </footer>
-      </Row>
-    </BrowserRouter>
-  );
-}
-    
-  const styles = {
-    wrapper:{
-      backgroundImage: `url(${background})`,
-      backgroundPosition: "center",
-      height: "100vh"
-    }, 
-    header:{
-      color: "black",
-      height: "5%"
-    },
-    main:{
-      height: "90%",
-      textPosition: "center"
-    },
-    footer:{
-      position: "absolute",
-      bottom: 0,
-      height: '5%', 
-      color: 'black'
+    export default function App() {
+      return (
+        <>
+        <Header/>
+        <EmployeeContainer/>
+        </>
+      );
     }
-  }
+    
+  
