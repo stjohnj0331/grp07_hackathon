@@ -5,7 +5,7 @@ function EmployeeTable(props) {
 
 return(
   
-    <table className="table table-dark table-striped table-hover text-center table-sortable">
+    <table className="table table-light table-striped table-hover text-center table-sortable">
       {/* Header */}
       <thead>
         <tr>

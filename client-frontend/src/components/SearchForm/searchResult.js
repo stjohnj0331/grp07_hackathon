@@ -2,7 +2,7 @@ function SearchResult(props) {
     return (
         <>
 
-            <table className="table table-dark table-striped table-hover text-center table-sortable">
+            <table className="table table-light table-striped table-hover text-center table-sortable">
                 {/* Header */}
                 <thead>
                     <tr>
@@ -16,6 +16,7 @@ function SearchResult(props) {
                         <th scope="col"><span onClick={() => props.sortBy("phone_number")}>Phone</span></th>
                         <th scope="col"><span onClick={() => props.sortBy("job_role")}>Job Role</span></th>
                         <th scope="col"><span onClick={() => props.sortBy("location")}>Work Location</span></th>
+                        <th scope="col"><span onClick={() => props.sortBy("salary")}>Salary</span></th>
                     </tr>
                 </thead>
 
@@ -41,10 +42,17 @@ function SearchResult(props) {
                         <td classname="align-middle">
                             {employee.location}
                         </td>
-{/* add authentication to view salary
-                        <td className='align-middle'>
-                            {employee.salary}
-                        </td> */}
+                        {/* authenticated && user.employees.includes(employee.name) && */}
+                        {employee.name === "Thomas Shelby" ? (
+                            <td className='align-middle'>
+                                {employee.salary}
+                            </td>
+                        ) : (
+                            <td className='align-middle'>
+                            Access not allowed
+                            </td>
+                        ) }
+
 
                     </tr>)}
 
