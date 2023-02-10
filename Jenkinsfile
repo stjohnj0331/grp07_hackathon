@@ -23,10 +23,11 @@ node {
  }
  stage('Deploy'){
 	bat'''
-		set PATH=./server-backend
-		npm run start
-		cd client-frontend
-		npm run start
+	set PATH=C:/"Program Files"/nodejs
+	cd server-backend
+	npm run start
+	cd client-frontend
+	npm run start
 	'''
  }
 }
