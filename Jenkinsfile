@@ -34,7 +34,7 @@ pipeline {
 			 steps{
 				bat'''
 				npm install -g serve
-				serve -s build
+				serve -s build -l 7000
 				'''
 			 }
 		 }
