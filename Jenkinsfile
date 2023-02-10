@@ -7,25 +7,13 @@ pipeline {
 				git (branch:'main',url: 'https://github.com/stjohnj0331/grp07_hackathon.git')
 			}
 		}
-
-		 stage('Install Dependencies'){
-			 steps{
-				 bat'''
-				 set PATH=C:/"Program Files"/nodejs
-				 cd client-frontend
-				 npm install
-				 cd server-backend
-				 npm install
-				 '''
-			 }
-		 }
 		 stage('Build Client'){
 			 steps{
 				 bat'''
 				 set PATH=C:/"Program Files"/nodejs
 				 cd client-frontend
+				 npm install
 				 npm run build
-				
 				 '''
 			 }
 			 
@@ -35,6 +23,7 @@ pipeline {
 				bat'''
 				set PATH=C:/"Program Files"/nodejs
 				cd server-backend
+				npm install
 				npm run build
 				'''
 			 }
