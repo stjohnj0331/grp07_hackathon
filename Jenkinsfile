@@ -25,9 +25,15 @@ pipeline {
 				 set PATH=C:/"Program Files"/nodejs
 				 cd client-frontend
 				 npm run build
-				 cd server-backend
-				 npm run build
+				
 				 '''
+			 }
+			 steps{
+				bat'''
+				set PATH=C:/"Program Files"/nodejs
+				cd server-backend
+				npm run build
+				'''
 			 }
 		 }
 		 stage('Deploy'){
