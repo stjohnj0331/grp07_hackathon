@@ -15,7 +15,7 @@ function EmployeeTable(props) {
       {/* Header */}
       <thead >
         <tr>
-          <th scope="col">Name</th>
+          <th scope="col">Image</th>
 
           <th scope="col" data-name="name" data-sortable="true">
             <span onClick={() => props.sortBy("name")}>
