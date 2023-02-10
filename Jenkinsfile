@@ -25,14 +25,10 @@ node {
 	bat'''
 		set PATH=./server-backend
 		npm run start
-	''',
-	bat '''
-		set PATH=./client-frontend
+		cd client-frontend
 		npm run start
 	'''
-}
-
-
+ }
 }
 
 
