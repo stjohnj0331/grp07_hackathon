@@ -18,11 +18,8 @@ function SearchForm() {
                 setEmployees(employeeArray);
                 console.log(employeeArray)
             }
-
         )
-
     }
-
     return (
         <section style={styles.wrap}>
             <div style={styles.directory}>
