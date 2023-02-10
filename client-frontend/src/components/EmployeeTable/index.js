@@ -9,7 +9,7 @@ return(
       {/* Header */}
       <thead>
         <tr>
-          <th scope="col">Image</th>
+          <th scope="col">Name</th>
 
           <th scope="col" data-name="name" data-sortable="true">
             <span onClick={()=> props.sortBy("name")}>
@@ -17,7 +17,7 @@ return(
             </span>
           </th>
       {/* Stuff after clicked */}
-      <th scope="col"><span onClick={() => props.sortBy("phone_umber")}>Phone</span></th>
+      <th scope="col"><span onClick={() => props.sortBy("phone_number")}>Phone</span></th>
       <th scope="col"><span onClick={() => props.sortBy("job_role")}>Job Role</span></th>
       <th scope="col"><span onClick={() => props.sortBy("location")}>Work Location</span></th>
         </tr>
