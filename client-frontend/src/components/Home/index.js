@@ -7,16 +7,17 @@ import Header from "../Header";
 
 function Home(){
 return (
+  <>
         <Row style={styles.wrapper} className=" img-responsive">
           <Header />
           <main style={styles.main}>
           <Row>
               <header className='nav'>
-              <ButtonGroup>
+              <ButtonGroup style={styles.buttonGroup}>
                   <Col xs={0}></Col>
-                  <Col><Button variant="danger"><Link style={styles.nav} to="/">Home</Link></Button></Col>
-                  <Col><Button variant="danger"><Link style={styles.nav} to='/search'>Search</Link></Button></Col>
-                  <Col><Button variant="danger"><Link style={styles.nav} to='/allEmployees'>All Employees</Link></Button></Col>
+                  <Col><Button style={styles.button} variant="danger"><Link style={styles.nav} to="/">Home</Link></Button></Col>
+                  <Col><Button style={styles.button} variant="danger"><Link style={styles.nav} to='/search'>Search</Link></Button></Col>
+                  <Col><Button style={styles.button} variant="danger"><Link style={styles.nav} to='/allEmployees'>All Employees</Link></Button></Col>
               </ButtonGroup>
               </header>
               <Row>
@@ -32,27 +33,41 @@ return (
             Copyright &copy; kmj.com {new Date().getUTCFullYear()}
           </footer>
         </Row>
+        </>
 )
 }export default Home;
 
 const styles = {
-    wrapper: {
-      backgroundImage: `url(${background})`,
-      backgroundPosition: "center",
-      height: "100vh"
-    },
-    header: {
-      color: "black",
-      height: "5%"
-    },
-    main: {
-      height: "90%",
-      textPosition: "center"
-    },
-    footer: {
-      position: "absolute",
-      bottom: 0,
-      height: '5%',
-      color: 'black'
-    }
+  nav: {
+    color: "#FFF",
+    fontWeight: 'bold'
+  },
+  wrapper: {
+    backgroundImage: `url(${background})`,
+    backgroundPosition: "center",
+    height: "100vh"
+  },
+  header: {
+    color: "black",
+    height: "5%"
+  },
+  main: {
+    height: "90%",
+    textPosition: "center"
+  },
+  footer: {
+    position: "absolute",
+    bottom: 0,
+    height: '5%',
+    color: 'black'
+  },
+  button: {
+    width: '200px',
+    padding: '5px',
+    margin: '2px'
+  },
+  buttonGroup: {
+    margin: '5px',
+    padding: '10px'
   }
+}
