@@ -1,4 +1,4 @@
-import {BrowserRouter,Routes,Route,Link,Navigate} from "react-router-dom";
+import {Routes,Route,Link} from "react-router-dom";
 import {Button, Row, Col, ButtonGroup} from 'react-bootstrap';
 import EmployeeContainer from "../EmployeeContainer";
 import EntryPage from "./EntryPage";
@@ -6,7 +6,7 @@ import background from "../../images/background.png"
 import SearchForm from "../SearchForm";
 import Header from "../Header";
 
-function Home(){
+function Home(username){
 return (
   <>
         <Row style={styles.wrapper} className=" img-responsive">
@@ -24,8 +24,8 @@ return (
               <Row>
                   <Routes>
                       <Route index element={<EntryPage />} /> 
-                      <Route path="search" element={<SearchForm />} />
-                      <Route path="allEmployees" element={<EmployeeContainer />} />
+                      <Route path="search" element={<SearchForm username={username.username}/>} />
+                      <Route path="allEmployees" element={<EmployeeContainer username={username.username}/>} />
                   </Routes>
               </Row>
           </Row>
@@ -46,7 +46,9 @@ const styles = {
   wrapper: {
     backgroundImage: `url(${background})`,
     backgroundPosition: "center",
-    height: "100vh"
+    height: "100vh",
+    width: "100vw",
+    backgroundSize: "cover"
   },
   header: {
     color: "black",

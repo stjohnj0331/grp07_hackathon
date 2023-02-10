@@ -39,11 +39,11 @@ function SearchResult(props) {
                             {employee.job_role}
                         </td>
 
-                        <td classname="align-middle">
+                        <td className="align-middle">
                             {employee.location}
                         </td>
-                        {/* authenticated && user.employees.includes(employee.name) && */}
-                        {employee.name === "Thomas Shelby" ? (
+                        {/* user.employees.includes(employee.name) || user.username === employee.name */}   
+                        {props.username === employee.name ? (
                             <td className='align-middle'>
                                 {employee.salary}
                             </td>

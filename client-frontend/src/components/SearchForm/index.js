@@ -4,7 +4,7 @@ import { getEmployee } from '../../rest/index.js'
 import SearchResult from './searchResult.js'
 
 
-function SearchForm() {
+function SearchForm(username) {
     const [employees, setEmployees] = useState([]);
     // search term is the term that needs to be sent to the backend
     const [searchTerm, setSearchTerm] = useState([]);
@@ -31,7 +31,7 @@ function SearchForm() {
             </div>
             <br />
             {/* <p>You're searching for {searchTerm}</p> */}
-            <SearchResult employeeList={employees}/>
+            <SearchResult employeeList={employees} username={username.username}/>
         </section>
     )
 
