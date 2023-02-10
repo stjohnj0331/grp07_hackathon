@@ -1,7 +1,6 @@
 pipeline {
  	agent any
 	tools {nodejs "node"}
-	stages{
 		stage('Checkout') {
 			git (branch:'main',url: 'https://github.com/stjohnj0331/grp07_hackathon.git')
 		}
@@ -29,7 +28,6 @@ pipeline {
 			
 			'''
 		 }
-	}
  }
 
 
