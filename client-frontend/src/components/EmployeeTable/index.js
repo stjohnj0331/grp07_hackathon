@@ -3,7 +3,10 @@ import picHolder from "../../images/picHolder.avif"
 // import Gravatar from "react-gravatar"
 // props.employees
 function EmployeeTable(props) {
-
+  const userIndex =  props.employees.findIndex(employee => employee.name === props.username)
+  //list of employees that are managed by the user
+  const userEmployees = props.employees[userIndex]?.employes;
+  const jobRole = props.employees[userIndex]?.job_role;
   return (
 
 
@@ -61,7 +64,7 @@ function EmployeeTable(props) {
             {employee.location}
           </td>
 
-          {props.username === employee.name ? (
+          {props.username === employee.name || userEmployees.includes(employee.name) || jobRole === "HR" ? (
             <td className='align-middle'>
               {employee.salary}
             </td>
