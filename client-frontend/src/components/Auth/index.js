@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import {useNavigate} from 'react-router-dom';
 
 async function loginUser(credentials) {
   return fetch('http://localhost:4000/users/authenticate', {
@@ -14,10 +13,8 @@ async function loginUser(credentials) {
 
 //hash this before sending to the server
 export default function Login({setLoggedInUser}) {
-  const navigate = useNavigate();
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
-  const [authenticated, setAuthenticated] = useState(localStorage.getItem(localStorage.getItem("authenticated")|| false))
 
   const handleSubmit = async e => {
     e.preventDefault();
@@ -26,16 +23,9 @@ export default function Login({setLoggedInUser}) {
       username,
       password
     });
-    console.log("token: "+token);
+    console.log("token: ",token);
+    
     setLoggedInUser(token);
-    // if(token === true){
-    //   //console.log("Authenticated");
-    //   setAuthenticated(true)
-    //   localStorage.setItem("authenticated", true);
-    //   navigate("/dashboard");
-    // }else{
-    //   console.log("falied authentication");
-    // }
   }
   return(
     <div className="login-wrapper">
