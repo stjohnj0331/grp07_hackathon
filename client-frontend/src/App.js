@@ -21,11 +21,11 @@ export default function App() {
       <Row style={styles.wrapper} className=" img-responsive">
         <Header />
         <header className='nav'>
-          <ButtonGroup>
+          <ButtonGroup style={styles.buttonGroup}>
             <Col xs={0}></Col>
-            <Col><Button variant="danger"><Link style={styles.nav} to="/">Home</Link></Button></Col>
-            <Col><Button variant="danger"><Link style={styles.nav} to='/search'>Search</Link></Button></Col>
-            <Col><Button variant="danger"><Link style={styles.nav} to='/allEmployees'>All Employees</Link></Button></Col>
+            <Col><Button style={styles.button} variant="danger"><Link style={styles.nav} to="/">Home</Link></Button></Col>
+            <Col><Button style={styles.button} variant="danger"><Link style={styles.nav} to='/search'>Search</Link></Button></Col>
+            <Col><Button style={styles.button} variant="danger"><Link style={styles.nav} to='/allEmployees'>All Employees</Link></Button></Col>
           </ButtonGroup>
         </header>       
         <main style={styles.main}>
@@ -46,6 +46,10 @@ export default function App() {
 }
 
 const styles = {
+  nav: {
+    color: "#FFF",
+    fontWeight: 'bold'
+  },
   wrapper: {
     backgroundImage: `url(${background})`,
     backgroundPosition: "center",
@@ -65,4 +69,13 @@ const styles = {
     height: '5%',
     color: 'black'
   },
+  button: {
+    width: '200px',
+    padding: '5px',
+    margin: '2px'
+  },
+  buttonGroup: {
+    margin: '5px',
+    padding: '10px'
+  }
 }
