@@ -1,10 +1,9 @@
 ﻿// users hardcoded for simplicity, store in a db for production applications
 const users = [
-    { id: 1, username: 'test', password: 'test', firstName: 'Test', lastName: 'User' },
-    { id: 1, username: 'admin', password: 'password', firstName: 'Justin', lastName: 'St John' },
-    { id: 1, username: 'test2', password: 'test', firstName: 'Test2', lastName: 'User2' },
-    { id: 1, username: 'test3', password: 'test', firstName: 'Test3', lastName: 'User3' },
-    { id: 1, username: 'test4', password: 'test', firstName: 'Test4', lastName: 'User4' }
+    { id: 1, username: 'admin', password: 'password', firstName: 'Test', lastName: 'User' },
+    { id: 2, username: 'Bethany Marquardt', password: 'password', firstName: 'Bethany', lastName: 'Marquardt' },
+    { id: 3, username: 'Kieran Marcus', password: 'password', firstName: 'Kieran', lastName: 'Marcus' },
+    { id: 4, username: 'Corey  Schimmel', password: 'password', firstName: 'Corey', lastName: 'Schimmel' }
 ];
 
 module.exports = {
