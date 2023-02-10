@@ -72,9 +72,8 @@ return(
 
     </table>
     </>
-    );
-};
-  
+
+    )};
 
 
   export default EmployeeTable;
