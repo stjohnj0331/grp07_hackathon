@@ -18,11 +18,8 @@ function SearchForm() {
                 setEmployees(employeeArray);
                 console.log(employeeArray)
             }
-
         )
-
     }
-
     return (
         <section className="wrapper">
             <p>Search for an employee to view in the directory.</p>

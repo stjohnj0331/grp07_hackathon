@@ -1,95 +1,58 @@
-//need a DB for hashed pwds 
+import React, { useState } from 'react';
+import {useNavigate} from 'react-router-dom';
 
-//anyone can use the directory but only managers/HR can view sensative data or 
-//employees can view their own data
+async function loginUser(credentials) {
+  return fetch('http://localhost:4000/users/authenticate', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(credentials)
+  })
+    .then(data => data.json())
+}
 
-//login/verify identity of user/manager/HR
-    //create login page with UN/PW inputs
-    //create login button 
+//hash this before sending to the server
+export default function Login({setLoggedInUser}) {
+  const navigate = useNavigate();
+  const [username, setUserName] = useState();
+  const [password, setPassword] = useState();
+  const [authenticated, setAuthenticated] = useState(localStorage.getItem(localStorage.getItem("authenticated")|| false))
 
-//limit data visibility based on role and relationship
-    //check list of direct reports for managers and normal users
-    //if HR allow all sensative data
-
-    import React, { useState } from 'react';
-    
-    async function loginUser(credentials) {
-    
-     return fetch('http://localhost:9090/login', {
-    
-       method: 'POST',
-    
-       headers: {
-    
-         'Content-Type': 'application/json'
-    
-       },
-    
-       body: JSON.stringify(credentials)
-    
-     })
-    
-       .then(data => data.json())
-    
-    }
-    
-    export default function Login() {
-    
-      const [username, setUserName] = useState();
-    
-      const [password, setPassword] = useState();
-      const [token, setToken] = useState();
-    
-      const handleSubmit = async e => {
-    
-        e.preventDefault();
-    
-        const token = await loginUser({
-    
-          username,
-    
-          password
-    
-        });
-    
-        setToken(token);
-    
-      }
-    
-      return(
-    
-        <div className="login-wrapper">
-    
-          <h1>Please Log In</h1>
-    
-          <form onSubmit={handleSubmit}>
-    
-            <label>
-    
-              <p>Username</p>
-    
-              <input type="text" onChange={e => setUserName(e.target.value)} />
-    
-            </label>
-    
-            <label>
-    
-              <p>Password</p>
-    
-              <input type="password" onChange={e => setPassword(e.target.value)} />
-    
-            </label>
-    
-            <div>
-    
-              <button type="submit">Submit</button>
-    
-            </div>
-    
-          </form>
-    
+  const handleSubmit = async e => {
+    e.preventDefault();
+    //here we send the token
+    const token = await loginUser({
+      username,
+      password
+    });
+    console.log("token: "+token);
+    setLoggedInUser(token);
+    // if(token === true){
+    //   //console.log("Authenticated");
+    //   setAuthenticated(true)
+    //   localStorage.setItem("authenticated", true);
+    //   navigate("/dashboard");
+    // }else{
+    //   console.log("falied authentication");
+    // }
+  }
+  return(
+    <div className="login-wrapper">
+      <h1>Please Log In</h1>
+      <form onSubmit={handleSubmit}>
+        <label>
+          <p>Username</p>
+          <input type="text" onChange={e => setUserName(e.target.value)} />
+        </label>
+        <label>
+          <p>Password</p>
+          <input type="password" onChange={e => setPassword(e.target.value)} />
+        </label>
+        <div>
+          <button type="submit">Submit</button>
         </div>
-    
-      )
-    
-    }
+      </form>
+    </div>
+  )
+}
