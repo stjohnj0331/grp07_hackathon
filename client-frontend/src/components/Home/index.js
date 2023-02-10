@@ -46,7 +46,9 @@ const styles = {
   wrapper: {
     backgroundImage: `url(${background})`,
     backgroundPosition: "center",
-    height: "100vh"
+    height: "100vh",
+    width: "100vw",
+    backgroundSize: "cover"
   },
   header: {
     color: "black",
