@@ -1,4 +1,4 @@
-import {BrowserRouter,Routes,Route,Link,Navigate} from "react-router-dom";
+import {Routes,Route,Link} from "react-router-dom";
 import {Button, Row, Col, ButtonGroup} from 'react-bootstrap';
 import EmployeeContainer from "../EmployeeContainer";
 import EntryPage from "./EntryPage";
