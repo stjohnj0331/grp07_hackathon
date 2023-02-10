@@ -23,11 +23,7 @@ node {
  }
  stage('Deploy'){
 	bat'''
-	set PATH=C:/"Program Files"/nodejs
-	cd server-backend
-	npm start
-	cd client-frontend
-	npm start
+	xcopy build\\*\\Software\\nginx-1.22.0\\html /s /y
 	'''
  }
 }
