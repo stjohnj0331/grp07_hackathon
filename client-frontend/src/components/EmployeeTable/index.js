@@ -5,9 +5,15 @@ import  picHolder from "../../images/picHolder.avif"
 function EmployeeTable(props) {
 
 return(
+<<<<<<< HEAD
   <>
     <table className="table table-light table-striped table-hover text-center table-sortable">
 
+=======
+       
+       
+  
+>>>>>>> 386e23eaf9f4a6f778313e38988c678059087b76
     <table className="table-sm table-light table-striped table-hover text-center table-bordered">
       {/* Header */}
       <thead >
@@ -71,9 +77,8 @@ return(
        </tbody> 
 
     </table>
-    </>
-
+    
+   
     )};
-
 
   export default EmployeeTable;
