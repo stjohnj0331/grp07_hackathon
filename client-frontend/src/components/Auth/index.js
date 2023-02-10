@@ -28,21 +28,43 @@ export default function Login({setLoggedInUser}) {
     setLoggedInUser(token);
   }
   return(
-    <div className="login-wrapper">
-      <h1>Please Log In</h1>
+    <div className="login-wrapper" style={styles.loginWrapper}>
+      <h1>Please Log In to View the Employee Directory</h1>
       <form onSubmit={handleSubmit}>
         <label>
           <p>Username</p>
-          <input type="text" onChange={e => setUserName(e.target.value)} />
+          <input type="text" style={styles.input} onChange={e => setUserName(e.target.value)} />
         </label>
         <label>
           <p>Password</p>
-          <input type="password" onChange={e => setPassword(e.target.value)} />
+          <input type="password" style={styles.input} onChange={e => setPassword(e.target.value)} />
         </label>
         <div>
-          <button type="submit">Submit</button>
+          <button type="submit" style={styles.button}>Submit</button>
         </div>
       </form>
     </div>
   )
+}
+
+
+const styles = {
+  loginWrapper: {
+    margin: "2px",
+    padding: '2px',
+    textAlign: 'center'
+  },
+  input: {
+    margin: '2px',
+    padding: '5px',
+    borderRadius: '5px'
+  },
+  button: {
+    margin: '2px',
+    padding: '5px',
+    borderRadius: '5px',
+    backgroundColor: '#E5E4E2',
+    border: '2px black solid',
+    fontWeight: 'bold'
+  }
 }

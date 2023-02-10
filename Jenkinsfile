@@ -34,8 +34,8 @@ pipeline {
 		 stage('Deploy'){
 			 steps{
 				bat'''
-				npm install -g serve
-				serve -s build
+				cd server-backend
+				node index.js
 				'''
 			 }
 		 }
