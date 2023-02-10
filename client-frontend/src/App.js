@@ -1,48 +1,27 @@
-import React from "react";
-import {
-  BrowserRouter,
-  Route,
-  Routes,
-  Link
-} from "react-router-dom";
-import { Button, Row, Col, ButtonGroup } from 'react-bootstrap'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { React, useState, useEffect } from "react";
+import Home from "./components/Home";
 import background from "./images/background.png"
 import './App.css';
-import EmployeeContainer from "./components/EmployeeContainer";
-import SearchForm from "./components/SearchForm";
-import Header from "./components/Header";
-import Home from './components/home.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Auth from './components/Auth';
 
 export default function App() {
-  return (
-    <BrowserRouter>
-      <Row style={styles.wrapper} className=" img-responsive">
-        <Header />
-        <header className='nav'>
-          <ButtonGroup style={styles.buttonGroup}>
-            <Col xs={0}></Col>
-            <Col><Button style={styles.button} variant="danger"><Link style={styles.nav} to="/">Home</Link></Button></Col>
-            <Col><Button style={styles.button} variant="danger"><Link style={styles.nav} to='/search'>Search</Link></Button></Col>
-            <Col><Button style={styles.button} variant="danger"><Link style={styles.nav} to='/allEmployees'>All Employees</Link></Button></Col>
-          </ButtonGroup>
-        </header>       
-        <main style={styles.main}>
-          <Row>
-            <Routes>
-              <Route index element={<Home />} /> 
-              <Route path="search" element={<SearchForm />} />
-              <Route path="allEmployees" element={<EmployeeContainer />} />
-            </Routes>
-        </Row>
-        </main>
-        <footer style={styles.footer}>
-          Copyright &copy; kmj.com {new Date().getUTCFullYear()}
-        </footer>
-      </Row>
-    </BrowserRouter>
-  );
+  let [authenticated, setAuthenticated] = useState(false);
+  let [ loggedInUser, setLoggedInUser] = useState();
+  useEffect(() => {
+    console.log("loggedInUser:: " + loggedInUser);
+    if (loggedInUser) {
+      console.log("authenticated(inside useEffect()): " + authenticated);
+    }
+  }, [loggedInUser]);
+    console.log("being redirected to login page");
+    return(
+      <>
+        <button onClick={ () =>setLoggedInUser(loggedInUser ? undefined : {username:"Justin"})}>Login</button>;
+        {JSON.stringify(loggedInUser)}
+        {loggedInUser ? <Home /> : <Auth setLoggedInUser={setLoggedInUser}/>}
+      </>
+    )
 }
 
 const styles = {
@@ -68,14 +47,5 @@ const styles = {
     bottom: 0,
     height: '5%',
     color: 'black'
-  },
-  button: {
-    width: '200px',
-    padding: '5px',
-    margin: '2px'
-  },
-  buttonGroup: {
-    margin: '5px',
-    padding: '10px'
   }
 }
