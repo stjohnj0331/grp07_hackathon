@@ -19,7 +19,7 @@ pipeline {
 				 '''
 			 }
 		 }
-		 stage('Build'){
+		 stage('Build Client'){
 			 steps{
 				 bat'''
 				 set PATH=C:/"Program Files"/nodejs
@@ -28,7 +28,10 @@ pipeline {
 				
 				 '''
 			 }
-			 steps{
+			 
+		 }
+		 stage('Build Server'){
+			steps{
 				bat'''
 				set PATH=C:/"Program Files"/nodejs
 				cd server-backend
