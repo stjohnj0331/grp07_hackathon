@@ -1,6 +1,5 @@
 import { React, useState, useEffect } from "react";
 import Home from "./components/Home";
-import background from "./images/background.png"
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Auth from './components/Auth';
@@ -21,30 +20,4 @@ export default function App() {
         {loggedInUser ? <Home username={loggedInUser.username}/> : <Auth setLoggedInUser={setLoggedInUser}/>}
       </>
     )
-}
-
-const styles = {
-  nav: {
-    color: "#FFF",
-    fontWeight: 'bold'
-  },
-  wrapper: {
-    backgroundImage: `url(${background})`,
-    backgroundPosition: "center",
-    height: "100vh"
-  },
-  header: {
-    color: "black",
-    height: "5%"
-  },
-  main: {
-    height: "90%",
-    textPosition: "center"
-  },
-  footer: {
-    position: "absolute",
-    bottom: 0,
-    height: '5%',
-    color: 'black'
-  }
 }

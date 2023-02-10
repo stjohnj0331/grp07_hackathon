@@ -7,8 +7,6 @@ import EmployeeTable from "../EmployeeTable";
 function EmployeeContainer(username) {
 
 const [employees, setEmployees] =useState([]);
-// const [filterEmployees, setFilteredEmployees] =useState([])
-const [searchTerm, setSearchTerm] = useState([]);
 
 
 // fetch to backend 
