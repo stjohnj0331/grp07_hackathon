@@ -1,13 +1,13 @@
 import React from "react";
-import  picHolder from "../../images/picHolder.avif"
+import picHolder from "../../images/picHolder.avif"
 // import Gravatar from "react-gravatar"
 // props.employees
 function EmployeeTable(props) {
 
-return(
-       
-       
-  
+  return (
+
+
+
     <table className="table-sm table-light table-striped table-hover text-center table-bordered">
       {/* Header */}
       <thead >
@@ -15,19 +15,18 @@ return(
           <th scope="col">Name</th>
 
           <th scope="col" data-name="name" data-sortable="true">
-            <span onClick={()=> props.sortBy("name")}>
+            <span onClick={() => props.sortBy("name")}>
               Name
             </span>
           </th>
 
-      {/* Stuff after clicked */}
-      <th scope="col"><span onClick={() => props.sortBy("phone_number")}>Phone</span></th>
-      <th scope="col"><span onClick={() => props.sortBy("phone_number")}>Phone</span></th>
-      <th scope="col"><span onClick={() => props.sortBy("job_role")}>Job Role</span></th>
-      <th scope="col"><span onClick={() => props.sortBy("location")}>Work Location</span></th>
+          {/* Stuff after clicked */}
+          <th scope="col"><span onClick={() => props.sortBy("phone_number")}>Phone</span></th>
+          <th scope="col"><span onClick={() => props.sortBy("job_role")}>Job Role</span></th>
+          <th scope="col"><span onClick={() => props.sortBy("location")}>Work Location</span></th>
 
-      <th scope="col" data-name="salary" data-visible="false">
-            <span onClick={()=> props.sortBy("salary")}>
+          <th scope="col" data-name="salary" data-visible="false">
+            <span onClick={() => props.sortBy("salary")}>
               Salary
             </span>
           </th>
@@ -38,12 +37,12 @@ return(
 
       {/* Body of Table */}
       {/* create a new array for first and Last names  */}
-       <tbody>
-        
-        {props.employees.map(employee=><tr key= {employee._id}>
+      <tbody>
+
+        {props.employees.map(employee => <tr key={employee._id}>
           <td className="height=50%">
-            <img style={{ width: "50%", height: "50%" }} src = {picHolder} alt={employee.name} className="img-thumbnail"/>
-            
+            <img style={{ width: "50%", height: "50%" }} src={picHolder} alt={employee.name} className="img-thumbnail" />
+
           </td>
 
           <td className="align-middle">
@@ -51,28 +50,35 @@ return(
           </td>
 
           <td className="align-middle">
-          <a href={`tel:+1${employee.phone_number}`}>{employee.phone_number}</a> 
+            <a href={`tel:+1${employee.phone_number}`}>{employee.phone_number}</a>
           </td>
 
           <td className="align-middle">
-          {employee.job_role}
+            {employee.job_role}
           </td>
 
           <td classname="align-middle">
-          {employee.location}
+            {employee.location}
           </td>
 
-          <td  className='align-middle'>
-           {employee.salary}
-          </td>
+          {props.username === employee.name ? (
+            <td className='align-middle'>
+              {employee.salary}
+            </td>
+          ) : (
+            <td className='align-middle'>
+              Access not allowed
+            </td>
+          )}
 
         </tr>)}
 
-       </tbody> 
+      </tbody>
 
     </table>
-    
-   
-    )};
 
-  export default EmployeeTable;
+
+  )
+};
+
+export default EmployeeTable;

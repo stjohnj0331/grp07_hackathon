@@ -4,7 +4,7 @@ import EmployeeTable from "../EmployeeTable";
 
 
 
-function EmployeeContainer() {
+function EmployeeContainer(username) {
 
 const [employees, setEmployees] =useState([]);
 // const [filterEmployees, setFilteredEmployees] =useState([])
@@ -44,7 +44,7 @@ const [searchTerm, setSearchTerm] = useState([]);
     return (
         <>
         <div className= "container mt">
-        <EmployeeTable employees={employees} />
+        <EmployeeTable employees={employees} username={username.username}/>
         </div>
         </>
     )

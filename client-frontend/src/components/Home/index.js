@@ -6,7 +6,7 @@ import background from "../../images/background.png"
 import SearchForm from "../SearchForm";
 import Header from "../Header";
 
-function Home(){
+function Home(username){
 return (
   <>
         <Row style={styles.wrapper} className=" img-responsive">
@@ -24,8 +24,8 @@ return (
               <Row>
                   <Routes>
                       <Route index element={<EntryPage />} /> 
-                      <Route path="search" element={<SearchForm />} />
-                      <Route path="allEmployees" element={<EmployeeContainer />} />
+                      <Route path="search" element={<SearchForm username={username.username}/>} />
+                      <Route path="allEmployees" element={<EmployeeContainer username={username.username}/>} />
                   </Routes>
               </Row>
           </Row>

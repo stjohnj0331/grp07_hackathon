@@ -17,8 +17,8 @@ export default function App() {
     return(
       <>
         {/* <button onClick={ () =>setLoggedInUser(loggedInUser ? undefined : {username:"Justin"})}>Login</button>; */}
-        {/* {JSON.stringify(loggedInUser)} */}
-        {loggedInUser ? <Home /> : <Auth setLoggedInUser={setLoggedInUser}/>}
+         {JSON.stringify(loggedInUser)} 
+        {loggedInUser ? <Home username={loggedInUser.username}/> : <Auth setLoggedInUser={setLoggedInUser}/>}
       </>
     )
 }
