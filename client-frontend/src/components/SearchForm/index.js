@@ -21,13 +21,15 @@ function SearchForm() {
         )
     }
     return (
-        <section className="wrapper">
-            <p>Search for an employee to view in the directory.</p>
-            <form onSubmit={(e) => { e.preventDefault(); getEmployees(searchTerm) }}>
-                <label htmlFor="searchString" style={styles.lbl}>Employee:</label>
-                <input onChange={e => setSearchTerm(e.target.value)} value={searchTerm} style={styles.searchBox} />
-                <input type="submit" value="Search" className="accept" />
-            </form>
+        <section style={styles.wrap}>
+            <div style={styles.directory}>
+                <p>Search for an employee to view in the directory.</p>
+                <form onSubmit={(e) => { e.preventDefault(); getEmployees(searchTerm) }}>
+                    <input onChange={e => setSearchTerm(e.target.value)} value={searchTerm} style={styles.searchBox} />
+                    <input type="submit" value="Search" className="accept" />
+                </form>
+            </div>
+            <br />
             {/* <p>You're searching for {searchTerm}</p> */}
             <SearchResult employeeList={employees}/>
         </section>
@@ -36,16 +38,25 @@ function SearchForm() {
 }
 
 const styles = {
-    lbl: {
-        fontSize: "1.1em",
-    },
     searchBox: {
         display: 'block',
-        width: '95%',
+        width: '75%',
         lineHeight: '1.5em',
-        border: 'none',
-        borderBottom: '1px solid var(--dark2)',
+        border: '1px solid black',
+        marginBottom: '5px',
+        borderRadius: '3px'
     },
+    directory: {
+        width: '80%',
+        padding: '50px',
+        border: '1px solid black',
+        borderRadius: '5px',
+        backgroundColor: 'white'
+    },
+    wrap: {
+        margin: '10px',
+        leftMargin: '20px'
+    }
 };
 /* function SearchForm(props) {
   

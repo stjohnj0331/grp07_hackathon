@@ -25,6 +25,10 @@ export default function App() {
 }
 
 const styles = {
+  nav: {
+    color: "#FFF",
+    fontWeight: 'bold'
+  },
   wrapper: {
     backgroundImage: `url(${background})`,
     backgroundPosition: "center",
