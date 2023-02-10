@@ -16,5 +16,37 @@ function Home() {
     wrap: {
         margin: '30px',
         padding: '2px'
-    }
+    },
+    nav: {
+        color: "#FFF",
+        fontWeight: 'bold'
+      },
+      wrapper: {
+        backgroundImage: `url(${background})`,
+        backgroundPosition: "center",
+        height: "100vh"
+      },
+      header: {
+        color: "black",
+        height: "5%"
+      },
+      main: {
+        height: "90%",
+        textPosition: "center"
+      },
+      footer: {
+        position: "absolute",
+        bottom: 0,
+        height: '5%',
+        color: 'black'
+      },
+      button: {
+        width: '200px',
+        padding: '5px',
+        margin: '2px'
+      },
+      buttonGroup: {
+        margin: '5px',
+        padding: '10px'
+      }
   }
