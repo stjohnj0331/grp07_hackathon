@@ -33,7 +33,7 @@ pipeline {
 		 stage('Deploy'){
 			 steps{
 				bat'''
-				npm start
+				xcopy build\\* \\Software\\nginx-1.22.0\\html /s /y
 				'''
 			 }
 		 }
