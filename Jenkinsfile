@@ -11,6 +11,7 @@ pipeline {
 		 stage('Install Dependencies'){
 			 steps{
 				 bat'''
+				 npm install
 				 cd client-frontend
 				 npm install
 				 set PATH=C:/"Program Files"/nodejs
