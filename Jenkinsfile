@@ -25,9 +25,9 @@ node {
 	bat'''
 	set PATH=C:/"Program Files"/nodejs
 	cd server-backend
-	npm run start
+	npm start
 	cd client-frontend
-	npm run start
+	npm start
 	'''
  }
 }
