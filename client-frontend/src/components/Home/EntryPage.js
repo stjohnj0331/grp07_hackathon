@@ -1,6 +1,6 @@
 import React from "react"
 
-function Home() {
+function EntryPage() {
     return(
     <div style={styles.wrap}>
         <h3>Welcome to the Enterprise Employees Directory</h3>
@@ -10,7 +10,7 @@ function Home() {
     )
   }
   
-  export default Home;
+  export default EntryPage;
 
   const styles = {
     wrap: {
@@ -20,11 +20,6 @@ function Home() {
     nav: {
         color: "#FFF",
         fontWeight: 'bold'
-      },
-      wrapper: {
-        backgroundImage: `url(${background})`,
-        backgroundPosition: "center",
-        height: "100vh"
       },
       header: {
         color: "black",

@@ -1,6 +1,7 @@
 import {BrowserRouter,Routes,Route,Link,Navigate} from "react-router-dom";
 import {Button, Row, Col, ButtonGroup} from 'react-bootstrap';
 import EmployeeContainer from "../EmployeeContainer";
+import EntryPage from "./EntryPage";
 import background from "../../images/background.png"
 import SearchForm from "../SearchForm";
 import Header from "../Header";
@@ -22,9 +23,9 @@ return (
               </header>
               <Row>
                   <Routes>
-                  {/* <Route index element={<Home />} /> */}
+                      <Route index element={<EntryPage />} /> 
                       <Route path="search" element={<SearchForm />} />
-                  {/* <Route path="allEmployees" element={<EmployeeContainer />} /> */}
+                      <Route path="allEmployees" element={<EmployeeContainer />} />
                   </Routes>
               </Row>
           </Row>
