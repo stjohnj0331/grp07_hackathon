@@ -43,7 +43,7 @@ pipeline {
 				//cd server-backend
 				//node index.js
 				bat'''
-				cd AuthServer
+				cd server-backend/AuthServer
 				node authServer.js
 				'''
 			 }
