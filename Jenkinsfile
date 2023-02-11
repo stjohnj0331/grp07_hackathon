@@ -1,6 +1,6 @@
 pipeline {
  	agent any
-	tools {nodejs "node"}
+	//tools {nodejs "node"}
 	stages{
 		stage('Checkout') {
 			steps{
@@ -18,7 +18,7 @@ pipeline {
 			 }
 			 
 		 }
-		 stage('Build Server'){
+		 stage('Build Backend Server'){//using port 4000
 			steps{
 				bat'''
 				set PATH=C:/"Program Files"/nodejs
@@ -28,11 +28,23 @@ pipeline {
 				'''
 			 }
 		 }
+		 stage('Build Auth Server'){//using port 5000
+			steps{
+				bat'''
+				set PATH=C:/"Program Files"/nodejs
+				cd server-backend/AuthServer
+				npm install
+				npm run build
+				'''
+			 }
+		 }
 		 stage('Deploy'){
 			 steps{
+				//cd server-backend
+				//node index.js
 				bat'''
-				cd server-backend
-				node index.js
+				cd server-backend/AuthServer
+				node authServer.js
 				'''
 			 }
 		 }
