@@ -18,26 +18,7 @@ const [employees, setEmployees] =useState([]);
           setEmployees(employees)
         }) }, [])
         
-    //   filterEmployees = (data) => {
-    //     if(data) {
-    //         setEmployees({
-    //             setfilteredEmployees: employees.filter((employee)=>{
-    //                 return (
-    //                   employee.name ||
-    //                   employee.phone_number ||
-    //                   employee.job_role ||
-    //                   employee.location ||
-    //                   employee.salary
-
-    //                 )
-    //             })
-    //         })
-    //     } else{
-    //         setEmployees({setfilteredEmployees: employees})
-    //     }
-    //   };
    
-
   
     return (
         <>

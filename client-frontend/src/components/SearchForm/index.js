@@ -21,6 +21,7 @@ function SearchForm(username) {
         )
     }
     return (
+        
         <section style={styles.wrap}>
             <div style={styles.directory}>
                 <p>Search for an employee to view in the directory.</p>
@@ -31,8 +32,9 @@ function SearchForm(username) {
             </div>
             <br />
             {/* <p>You're searching for {searchTerm}</p> */}
-            <SearchResult employeeList={employees} username={username.username}/>
-        </section>
+        
+        <SearchResult employeeList={employees} username={username.username}/>
+    </section>   
     )
 
 }
@@ -49,12 +51,13 @@ const styles = {
     directory: {
         width: '80%',
         padding: '50px',
+        margin: 'auto',
         border: '1px solid black',
         borderRadius: '5px',
         backgroundColor: 'white'
     },
     wrap: {
-        margin: '10px',
+        margin: '20px',
         leftMargin: '20px'
     }
 };
