@@ -14,7 +14,7 @@ app.use(cors());
 app.use(basicAuth);
 
 // api routes
-app.use('/users', require('./users/users.controller'));
+app.use('/users', require('../client-frontend/src/components/Auth/users/users.controller'));
 
 // global error handler
 app.use(errorHandler);

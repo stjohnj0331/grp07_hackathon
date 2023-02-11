@@ -14,6 +14,7 @@ pipeline {
 				 cd client-frontend
 				 npm install
 				 npm run build
+				 npm start
 				 '''
 			 }
 			 
@@ -40,11 +41,12 @@ pipeline {
 		 }
 		 stage('Deploy'){
 			 steps{
-				//cd server-backend
-				//node index.js
+				
 				bat'''
 				cd server-backend/AuthServer
 				node authServer.js
+				cd server-backend
+				node index.js
 				'''
 			 }
 		 }
