@@ -9,9 +9,8 @@ function EmployeeTable(props) {
   const jobRole = props.employees[userIndex]?.job_role;
   return (
 
-
-
-    <table className="table table-light table-striped table-hover text-center table-bordered">
+ 
+    <table  style = {styles.tableDiv} className="table table-light table-striped table-hover text-center table-bordered">
       {/* Header */}
       <thead >
         <tr>
@@ -35,8 +34,8 @@ function EmployeeTable(props) {
           </th>
 
         </tr>
-      </thead>
-
+      
+        </thead>
 
       {/* Body of Table */}
       {/* create a new array for first and Last names  */}
@@ -75,13 +74,25 @@ function EmployeeTable(props) {
           )}
 
         </tr>)}
+        
 
       </tbody>
 
     </table>
 
-
+    
   )
 };
+
+const styles = {
+  
+  tableDiv: {
+     
+    width: "50%",
+
+    margin:'auto'
+      
+  }
+}
 
 export default EmployeeTable;

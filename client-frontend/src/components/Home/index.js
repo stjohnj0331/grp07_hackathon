@@ -13,14 +13,16 @@ return (
           <Header />
           <main style={styles.main}>
           <Row>
-              <header className='nav'>
-              <ButtonGroup style={styles.buttonGroup}>
+              
+              <div class="text-center">
+              <ButtonGroup style={styles.buttonGroup} >
                   <Col xs={0}></Col>
                   <Col><Button style={styles.button} variant="danger"><Link style={styles.nav} to="/">Home</Link></Button></Col>
                   <Col><Button style={styles.button} variant="danger"><Link style={styles.nav} to='/search'>Search</Link></Button></Col>
                   <Col><Button style={styles.button} variant="danger"><Link style={styles.nav} to='/allEmployees'>All Employees</Link></Button></Col>
               </ButtonGroup>
-              </header>
+              </div>
+              
               <Row>
                   <Routes>
                       <Route index element={<EntryPage />} /> 
