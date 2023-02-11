@@ -40,9 +40,9 @@ pipeline {
 		 }
 		 stage('Deploy'){
 			 steps{
+				//cd server-backend
+				//node index.js
 				bat'''
-				cd server-backend
-				node index.js
 				cd AuthServer
 				node authServer.js
 				'''
