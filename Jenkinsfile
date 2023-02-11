@@ -14,7 +14,6 @@ pipeline {
 				 cd client-frontend
 				 npm install
 				 npm run build
-				 npm start
 				 '''
 			 }
 			 
