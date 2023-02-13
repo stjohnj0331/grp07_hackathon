@@ -43,7 +43,7 @@ function EmployeeTable(props) {
 
         {props.employees.map(employee => <tr key={employee._id}>
           <td className="height=50%">
-            <img style={{ width: "25%", height: "25%" }} src={picHolder} alt={employee.name} className="img-thumbnail" />
+            <img style={{ width: "75%", height: "75%" }} src={picHolder} alt={employee.name} className="img-thumbnail" />
 
           </td>
 

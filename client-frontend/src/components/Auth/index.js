@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import background from "../../images/background.png";
+// import background from "../../images/background.png";
 import {Button} from 'react-bootstrap';
 
 async function loginUser(credentials) {
@@ -30,7 +30,7 @@ export default function Login({setLoggedInUser}) {
     setLoggedInUser(token);
   }
   return(
-    <div  style={styles.bgDiv}>
+    
     <div className="login-wrapper" style={styles.loginWrapper}>
       <h1>Enterprise Employee Directory</h1>
       <h4>Login</h4>
@@ -48,19 +48,13 @@ export default function Login({setLoggedInUser}) {
         </div>
       </form>
     </div>
-    </div>
+   
   )
 }
 
 
 const styles = {
-  bgDiv: {
-    backgroundImage: `url(${background})`,
-    backgroundPosition: "center",
-    height: "100vh",
-    width: "100vw",
-    backgroundSize: "cover"
-  },
+ 
   loginWrapper: {
     margin: "2px",
     padding: '200px',

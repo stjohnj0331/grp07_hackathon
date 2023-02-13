@@ -2,7 +2,7 @@ import {Routes,Route,Link} from "react-router-dom";
 import {Button, Row, Col, ButtonGroup} from 'react-bootstrap';
 import EmployeeContainer from "../EmployeeContainer";
 import EntryPage from "./EntryPage";
-import background from "../../images/background.png"
+// import background from "../../images/background.png"
 import SearchForm from "../SearchForm";
 import Header from "../Header";
 
@@ -46,11 +46,8 @@ const styles = {
     fontWeight: 'bold'
   },
   wrapper: {
-    backgroundImage: `url(${background})`,
-    backgroundPosition: "center",
-    height: "100vh",
-    width: "100vw",
-    backgroundSize: "cover"
+   
+ 
   },
   header: {
     color: "black",
