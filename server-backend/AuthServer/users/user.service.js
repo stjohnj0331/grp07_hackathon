@@ -3,7 +3,7 @@ const users = [
     { id: 1, username: 'admin', password: 'password', firstName: 'Test', lastName: 'User' },
     { id: 2, username: 'Bethany Marquardt', password: 'password', firstName: 'Bethany', lastName: 'Marquardt' },
     { id: 3, username: 'Kieran Marcus', password: 'password', firstName: 'Kieran', lastName: 'Marcus' },
-    { id: 4, username: 'Corey  Schimmel', password: 'password', firstName: 'Corey', lastName: 'Schimmel' }
+    { id: 4, username: 'Corey Schimmel', password: 'password', firstName: 'Corey', lastName: 'Schimmel' }
 ];
 
 module.exports = {
